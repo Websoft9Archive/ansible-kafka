@@ -11,7 +11,7 @@
 
     - name: Download Kafka
       unarchive:
-        src: https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.3.1/kafka_2.12-2.3.1.tgz
+        src: https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.4.0/kafka_2.13-2.4.0.tgz
         dest: /opt/
         remote_src: yes
         owner: kafka
@@ -59,12 +59,6 @@
         name: kafka
         state: started
         enabled: yes
-
-    # - name: Setting File Permission
-    #   shell: find /opt -type f -exec chmod 640 {} \;
-
-    # - name: Setting Directory Permission
-    #   shell: find /opt -type d -exec chmod 750 {} \;  
 
     - name: Setting Owner and  Group
       shell: chown -R kafka. /opt/kafka
