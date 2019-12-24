@@ -6,6 +6,11 @@
   become_method: sudo
   gather_facts: False
   pre_tasks:
+<<<<<<< HEAD
+=======
+    - name: Install Python
+      raw: sudo apt update && sudo apt-get -y install python
+>>>>>>> 7885c5e548b9a78da608ec0e4066e141d2cf35aa
 
 
 # # 核心任务
