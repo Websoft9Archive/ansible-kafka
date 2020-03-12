@@ -11,7 +11,7 @@
 
     - name: Download Kafka
       unarchive:
-        src: "{{kafka_download_url}}"
+        src: https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.4.0/kafka_2.13-2.4.0.tgz
         dest: /opt/
         remote_src: yes
         owner: kafka

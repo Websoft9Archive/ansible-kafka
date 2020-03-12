@@ -1,3 +1,2 @@
 ---
-# vars file for example
-# 保存当前roles 变量 
+kafka_download_url: https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.4.0/kafka_2.13-2.4.0.tgz

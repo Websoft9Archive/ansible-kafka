@@ -1,22 +1,15 @@
-  
-# # 服务器前置任务(ubuntu使用)
-- name: Pre_tasks of Kafka
-  hosts: all
-  become: yes
-  become_method: sudo
-  gather_facts: False
-  pre_tasks:
-
-
-# # 核心任务
-
+  # 核心任务
 - name: Kafka
   hosts: all
   become: yes
   become_method: sudo
 
+  vars_files:
+    - vars/main.yml
+
   roles:
-    - { role: common, tags: "common"}  
-    - { role: cloud, tags: "cloud"} 
+    - { role: role_common, tags: "role_common"}  
+    - { role: role_Cloud, tags: "role_Cloud"} 
     - { role: kafka, tags: "kafka"}
-    - { role: end, tags: "end"}
+    - { role: role_preend, tags: "role_preend"}
+    - { role: role_end, tags: "role_end" }
