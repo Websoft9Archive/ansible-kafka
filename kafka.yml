@@ -9,7 +9,7 @@
 
   roles:
     - { role: role_common, tags: "role_common"}  
-    - { role: role_Cloud, tags: "role_Cloud"} 
+    - { role: role_cloud, tags: "role_cloud"} 
     - { role: kafka, tags: "kafka"}
     - { role: role_preend, tags: "role_preend"}
     - { role: role_end, tags: "role_end" }
