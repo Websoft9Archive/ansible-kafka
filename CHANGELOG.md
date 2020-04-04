@@ -12,6 +12,7 @@
 ### Bug Fixes
 
 * 2020-04-03 增加对RedHat的支持
+* 2020-04-03 增加Kafka版本输出功能
 
 ### Features
 
