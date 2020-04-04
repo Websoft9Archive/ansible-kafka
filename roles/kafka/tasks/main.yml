@@ -59,3 +59,9 @@
 
 - name: Setting Owner and  Group
     shell: chown -R kafka. /opt/kafka
+
+# display version of components
+- name: Get kafka version
+  shell: ls /opt/kafka/libs 
+  register: kafka_display_ver
+  notify: kafka_display_ver
