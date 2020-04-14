@@ -1,14 +1,14 @@
 - include: "{{ansible_os_family}}.yml"
 
 - name: Add Kafka User
-    user:
+  user:
     name: kafka
     shell: /usr/sbin/nologin
     home: /opt/kafka
     create_home: no
 
 - name: Download Kafka
-    unarchive:
+  unarchive:
     src: "{{kafka_download_url}}"
     dest: /opt/
     remote_src: yes
@@ -18,17 +18,17 @@
 - shell: mv /opt/kafka_* /opt/kafka
 
 - name: Setting Environment
-    shell: echo 'export PATH="$PATH:/opt/kafka/bin"' >> /etc/profile
+  shell: echo 'export PATH="$PATH:/opt/kafka/bin"' >> /etc/profile
 
 - name: Configuration Zookeeper 
-    copy:
+  copy:
     src: zookeeper.properties
     dest: /opt/kafka/config
     owner: kafka 
     group: kafka
 
 - name: Configuration Kafka
-    lineinfile:
+  lineinfile:
     path: /opt/kafka/config/server.properties
     regexp: 'log.dirs=/tmp/kafka-logs'
     line: 'log.dirs=/opt/kafka/kafka-logs'
@@ -36,29 +36,29 @@
     group: kafka
 
 - name: Configuration Zookeeper Server
-    copy:
+  copy:
     src: zookeeper.service
     dest: /lib/systemd/system/
 
 - name: Configuration Kafka Server
-    copy:
+  copy:
     src: kafka.service
     dest: /lib/systemd/system/
 
 - name: Start Zookeeper
-    service:
+  service:
     name: zookeeper
     state: started
     enabled: yes
 
 - name: Start kafka
-    service:
+  service:
     name: kafka
     state: started
     enabled: yes
 
 - name: Setting Owner and  Group
-    shell: chown -R kafka. /opt/kafka
+  shell: chown -R kafka. /opt/kafka
 
 # display version of components
 - name: Get kafka version
