@@ -8,28 +8,23 @@ Kafka 预装包包含 Kafka 运行所需一序列支撑软件（简称为“组�
 
 ## 路径
 
-虽然运行 `whereis` 命令可以查看相关安装路径，但接下来我们仍然对路径信息进行更为准确的说明。
-
-```shell
-whereis rabbitmq-server
-whereis erlang
-
-#For Centos&Redhat
-rpm -ql rabbitmq-server
-rpm -ql erlang
-
-#For Ubuntu&Debian
-dpkg -L rabbitmq-server
-```
+下来我们对路径信息进行更为准确的说明：
 
 ### Kafka
 
-Kafka 安装目录： */data/rabbitmq*  
-Kafka 日志目录： */data/logs/rabbitmq*  
+Kafka 安装目录：*/opt/kafka*  
+Kafka 日志目录：*/opt/kafka/logs*  
+Kafka bin目录：*/opt/kafka/bin*  
+Kafka 配置目录：*/opt/kafka/config*  
 
-### Erlang
+### Java
 
-Erlang 安装目录： */data/erlang*  
+Java 虚拟机目录： */usr/bin/java*  
+
+### Zookeeper
+
+Zookeeper 配置文件路径：/opt/zookeeper/conf/  
+Zookeeper 日志文件：/opt/zookeeper/tmp/zookeeper.out  
 
 ## 端口号
 
@@ -39,9 +34,8 @@ Erlang 安装目录： */data/erlang*
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| HTTP | 15672 | 通过 HTTP 访问 Kafka 控制台 | 可选 |
-| TCP | 5672 | epmd | 可选 |
-| TCP | 55672 | Erlang distribution | 可选 |
+| TCP | 9092 | Kafka | 可选 |
+| TCP | 2181 | Zookeeper | 可选 |
 
 ## 版本号
 
@@ -51,10 +45,9 @@ Erlang 安装目录： */data/erlang*
 # Linux Version
 lsb_release -a
 
-# erlang  Version
-yum info erlang
-apt show erlang
+# Java  Version
+java -version
 
 # Kafka version
-rabbitmqctl status | grep Kafka*
+ls /opt/kafka/libs | grep kafka_
 ```

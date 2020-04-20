@@ -10,16 +10,9 @@
 
 #### Kafka服务无法启动？
 
-1. 以调试模式运行`rabbitmq-server console`，便可以查看启动状态和错误
-   ```
-   rabbitmq-server console
-   ```
-2. 打开日志文件：*/data/logs/rabbitmq-server*，检索 **failed** 关键词，分析错误原因
+1. 以调试模式运行`bash /opt/kafka/bin/kafka-server-start.sh`，便可以查看启动状态和错误
+2. 打开日志文件：*/data/logs*，检索 **failed** 关键词，分析错误原因
 
+#### 运行 *kafka-run-class.sh* 显示 **java: not found...**的错误？
 
-#### 在Chrome下修改密码后报错？
-
-这个并不是服务器端的问题，只要更新浏览器即可。
-
-![chrome error of Kafka](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-chromeerror-websoft9.png)
-
+这是Java环境变量缺失导致的问题，请设置环境变量：$JAVA_HOME=/usr/bin/java

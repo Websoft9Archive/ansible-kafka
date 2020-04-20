@@ -3,18 +3,9 @@
 #### How can I enable the debug mode of Kafka service?
 
 ```
-systemctl stop rabbitmq-server
-rabbitmq-server console
+systemctl stop kafka zookeeper
+bash /opt/kafka/bin/kafka-server-start.sh
 ```
-
-#### Can I reset password of Kafka by command?
-
-Yes, e.g `rabbitmqctl change_password  admin newpassword`
-
-#### If there is no domain name, can I deploy Kafka?
-
-Yes, visit Kafka by *http://Internet IP:8161*
-
 #### Is it possible to modify the source path of Kafka?
 
 No

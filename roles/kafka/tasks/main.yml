@@ -60,8 +60,20 @@
 - name: Setting Owner and  Group
   shell: chown -R kafka. /opt/kafka
 
+
+# add soft link
+- name: Add soft link 
+  shell: |
+    ln -s /opt/kafka /data/kafka
+    ln -s /opt/kafka/log /data/logs/kafka
+
 # display version of components
 - name: Get kafka version
-  shell: ls /opt/kafka/libs 
-  register: kafka_display_ver
-  notify: kafka_display_ver
+  shell: ls /opt/kafka/libs | grep kafka_
+  register: check_kafka_version
+  notify: check_kafka_version
+
+- name: Check kafka Service
+  shell: systemctl status kafka | grep Active*
+  register: check_kafka_service
+  notify: check_kafka_service

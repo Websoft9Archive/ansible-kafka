@@ -24,4 +24,20 @@ yum update -y
 
 ## Kafka升级
 
-详情参考官方升级文档：[Upgrading Kafka](https://www.rabbitmq.com/upgrade.html)
+Kafka 主要采用二级制安装方式，其升级方案差不多等于安装：
+
+1. 依次运行如下的命令做好准备：
+   ```
+   # stop Kafka,Zookeeper service
+   systemctl stop kafka
+   systemctl stop zookeeper
+
+   # rename the dir of Kafka for backup
+   mv /opt/kafka  /opt/kafkaBK
+   ```
+2. 从官网[下载Kafka](https://kafka.apache.org/downloads)后解压并上传到：*/opt* 目录，并命名为 *kafka*
+3. 分别运行下面的修改权限
+   ```
+   chown -R kafka. /opt/kafka
+   ```
+4. 重启 [Kafka服务](/zh/admin-services#kafka) 后升级完成

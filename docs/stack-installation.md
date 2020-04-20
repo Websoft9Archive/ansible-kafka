@@ -5,26 +5,26 @@ If you have completed the Kafka deployment on Cloud Platform, the following step
 ## Preparation
 
 1. Get the **Internet IP** on your Cloud Platform
-2. Check you **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud Console to ensure the TCP:8161 is allowed
-3. Make a domain resolution on your DNS Console if you want to use domain for Kafka
+2. Check you **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud Console to ensure the TCP:9092,2181 is allowed
 
-## Kafka Installation Wizard
+## Kafka Installation check
 
-1. Using local Chrome or Firefox to visit the URL *http://DNS:15672* or *http://Internet IP:15672*, you will enter installation wizard of Kafka
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-login-websoft9.png)
+Use you **SSH** to login Server, run the following commands
 
-2. Log in to Kafka web console([Don't have password?](/stack-accounts.md#rabbitmq))  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-bk-websoft9.png)
+```
+systemctl status kafka
+systemctl status zookeeper
+bash /opt/kafka/bin/kafka-configs.sh
+```
 
-3. Set you new password from: 【Users】>【Admin】>【Permissions】>【Update this user】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-pw-websoft9.png)
-
-> More useful Kafka guide, please refer to [Kafka Documentation](https://www.rabbitmq.com/documentation.html)
+> Refer to the Kafka official docs for your quick start: [Kafka Quickstart](https://kafka.apache.org/quickstart)
 
 ## Q&A
 
-#### I can't visit the start page of Kafka?
+#### Run the command "kafka-topics.sh", java not found?
 
-Your TCP:15672 of Security Group Rules is not allowed so there no response from Chrome or Firefox
+You should add a variable $JAVA_HOME=/usr/bin/java
 
-#### Kafka service can't start? 
+#### Is Java included in this deployment solution?
+
+Yes

@@ -4,28 +4,23 @@ The Kafka deployment package contains a sequence software (referred to as "compo
 
 ## Path
 
-You can check the file path by the cmd `whereis` of Kafka, and we have prepared more detail for your reference
-
-```shell
-whereis rabbitmq-server
-whereis erlang
-
-#For Centos&Redhat
-rpm -ql rabbitmq-server
-rpm -ql erlang
-
-#For Ubuntu&Debian
-dpkg -L rabbitmq-server
-```
+We have prepared the component path detail for your reference:
 
 ### Kafka
 
-Kafka installation directory:  */data/rabbitmq*  
-Kafka logs directory:  */data/logs/rabbitmq*  
+Kafka installation directory:*/opt/kafka*  
+Kafka installation log directory:*/opt/kafka/logs*  
+Kafka bin directory: */opt/kafka/bin*  
+Kafka configuration directory: */opt/kafka/config*  
 
-### Erlang
+### Java
 
-Erlang installation directory:  */data/erlang*  
+JVM directory: */usr/bin/java*  
+
+### Zookeeper
+
+Zookeeper configuration directory: /opt/zookeeper/conf/  
+Zookeeper log file: /opt/zookeeper/tmp/zookeeper.out  
 
 ## Ports
 
@@ -35,9 +30,8 @@ You can run the cmd `netstat -tunlp` to list all used ports, and we list the fol
 
 | Name | Number | Use |  Necessity |
 | --- | --- | --- | --- |
-| HTTP | 8161 | HTTP requests for Kafka Console| Required |
-| HTTPS | 5672 | epmd | Optional |
-| TCP | 55672 | Erlang distribution | Optional |
+| TCP | 9092 | Kafka | Optional |
+| TCP | 2181 | Zookeeper | Optional |
 
 
 ## Version
@@ -48,10 +42,9 @@ You can see the version from product page of Marketplace. However, after being d
 # Linux Version
 lsb_release -a
 
-# erlang  Version
-yum info erlang
-apt show erlang
+# Java  Version
+java -version
 
 # Kafka version
-rabbitmqctl status | grep Kafka*
+ls /opt/kafka/libs | grep kafka_
 ```

@@ -18,7 +18,7 @@ module.exports = [
     children: [
       '/zh/solution-backup',
       '/zh/solution-upgrade',
-      '/zh/solution-cli',
+      '/zh/solution-gui',
       '/zh/solution-more',
     ]
   },
@@ -28,7 +28,7 @@ module.exports = [
     collapsable: false,
     children: [
       '/zh/admin-services',
-      ['https://support.websoft9.com/docs/linux/zh/lang-erlang.html','Erlang'],
+      ['https://support.websoft9.com/docs/linux/zh/lang-java.html','Java'],
       ['https://support.websoft9.com/docs/linux/zh/admin-practices.html','Linux'],
     ]
   },

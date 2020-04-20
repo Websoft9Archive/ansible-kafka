@@ -3,21 +3,13 @@
 #### 如何以调试模式启动Kafka服务？
 
 ```
-systemctl stop rabbitmq-server
-rabbitmq-server console
+systemctl stop kafka zookeeper
+bash /opt/kafka/bin/kafka-server-start.sh
 ```
-
-#### 是否可以通过命令行修改Kafka后台密码？
-
-可以，`rabbitmqctl change_password  admin newpassword`
-
-#### 如果没有域名是否可以部署 Kafka？
-
-可以，访问`http://服务器公网IP` 即可
 
 #### 是否可以修改Kafka的源码路径？
 
-不可以
+不建议修改，除非你熟悉环境变量设置、后台服务的编写
 
 #### 部署和安装有什么区别？
 

@@ -26,4 +26,20 @@ yum update -y
 
 ## Kafka Upgrade
 
-Refer to the official docs: [Upgrading Kafka](https://www.rabbitmq.com/upgrade.html)
+You can upgrade your Kafka by the following steps:
+
+1. Prepare for upgrade
+   ```
+   # stop Kafka,Zookeeper service
+   systemctl stop kafka
+   systemctl stop zookeeper
+
+   # rename the dir of Kafka for backup
+   mv /opt/kafka  /opt/kafkaBK
+   ```
+2. [Download Kafka](https://kafka.apache.org/downloads) and unzip it, then upload to the directory: */opt* and renamed it to *kafka*
+3. Run the following modify permissions
+   ```
+   chown -R kafka. /opt/kafka
+   ```
+4. Restart [Kafka services](/zh/admin-services#kafka)

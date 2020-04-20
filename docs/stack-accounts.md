@@ -4,10 +4,7 @@ These accounts are required for Kafka image installation and configuration
 
 ## Kafka
 
-Kafka administrator username: `admin`  
-Kafka administrator password: `admin` or stored in the file of your server instance: */credentials/password.txt*  
-
-You use the **SSH** and run the command `cat /credentials/password.txt` to get the password
+Not need log in
 
 ## Linux
 

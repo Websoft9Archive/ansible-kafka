@@ -4,8 +4,4 @@ Each of the following solutions has been proven to be effective and we hope to b
 
 ## Configuration 
 
-Refer to the official docs: https://www.rabbitmq.com/configure.html
-
-## More
-
-coming soon...
+Refer to the official docs: https://kafka.apache.org/quickstart

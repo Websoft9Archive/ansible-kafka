@@ -8,14 +8,9 @@ You can find the keywords **Failed** or **error** from the logs directory: `/dat
 
 #### Kafka service can't start?
 
-1. Use the debug mode of `rabbitmq-server console` and you can see the errors
-   ```
-   rabbitmq-server console
-   ```
-2. Search the keywords **Failed** or **error** from logs: */data/logs/rabbitmq-server*
+1. Use the debug mode of `bash /opt/kafka/bin/kafka-server-start.sh` and you can see the errors
+2. Search the keywords **Failed** or **error** from logs: */data/logs*
 
-#### Error in Chrome when modify password?
+#### Run the command "kafka-topics.sh", java not found?
 
-This error is not attribute to Kafka server, once you have upgraded you local Chrome, it solved
-
-![chrome error of Kafka](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-chromeerror-websoft9.png)
+You should add a variable $JAVA_HOME=/usr/bin/java

@@ -13,7 +13,7 @@ We offer two deployment Kafka scenarios (the deployment results are the same):
 
 For users with experience with cloud servers, Deploy by Image equated with "one-click deployment".
 
-Websoft9 published [Kafka image](https://apps.websoft9.com/rabbitmq) on Cloud Platform, three methods for your deployment:
+Websoft9 published [Kafka image](https://apps.websoft9.com/kafka) on Cloud Platform, three methods for your deployment:
 
 * When **Create New Instance** , select the Kafka image as the system boot template.
 * When **Subscribe Kafka** on Marketplace, the system will promote you to create a new instance for this image at the same time.
@@ -23,7 +23,7 @@ Websoft9 published [Kafka image](https://apps.websoft9.com/rabbitmq) on Cloud Pl
 
 **Deploy by Script** means running a script on your cloud instance to pull the pre-packages online to your instance and configure it at the same time.
 
-Websoft9 provide the [Kafka ansbile automation script](https://github.com/Websoft9/ansible-rabbitmq) on Github. If you are familiar with Ansible, you can deploy the Kafka to the instance automaticly.
+Websoft9 provide the [Kafka ansbile automation script](https://github.com/Websoft9/ansible-kafka) on Github. If you are familiar with Ansible, you can deploy the Kafka to the instance automaticly.
 
 ## Comparison
 
