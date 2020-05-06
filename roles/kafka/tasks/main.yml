@@ -69,9 +69,7 @@
 
 # display version of components
 - name: Get kafka version
-  shell: ls /opt/kafka/libs | grep kafka_
-  register: check_kafka_version
-  notify: check_kafka_version
+  shell: sudo sh -c " ls /opt/kafka/libs | grep kafka_ 1>> /data/logs/install_version.txt"
 
 - name: Check kafka Service
   shell: systemctl status kafka | grep Active*
