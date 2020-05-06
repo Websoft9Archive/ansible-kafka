@@ -1,8 +1,4 @@
 ---
-- name: check_kafka_version
-  debug:
-    var: check_kafka_version.stdout
-    
 - name: check_kafka_service
   debug:
     var: check_kafka_service.stdout
