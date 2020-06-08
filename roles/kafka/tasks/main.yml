@@ -64,8 +64,8 @@
 # add soft link
 - name: Add soft link 
   shell: |
-    ln -sb /opt/kafka /data/kafka
-    ln -sb /opt/kafka/log /data/logs/kafka
+    ln -sf /opt/kafka /data
+    ln -sf /opt/kafka/log /data/logs
 
 # display version of components
 - name: Get kafka version
