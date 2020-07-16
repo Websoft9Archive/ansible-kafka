@@ -1,1 +1,2 @@
-jdk_version: "8" 
+jdk_version: "8"
+jdk_distribution: "jdk"
