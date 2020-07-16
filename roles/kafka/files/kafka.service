@@ -3,7 +3,7 @@ Description=Kafka
 After=zookeeper.service
 [Service]
 type=simple
-ExecStartPre=/bin/sleep 15
+ExecStartPre=/bin/sleep 15s
 ExecStart=/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties
 ExecStop=/opt/kafka/bin/kafka-server-stop.sh
 User=kafka
