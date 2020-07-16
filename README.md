@@ -26,7 +26,7 @@
 本项目通过下载 Kafka 源码进行安装，下载链接存储在：[role/kafka/default/main.yml](/roles/kafka/defaults/main.yml)。我们会定期检查并测试官方版本的可用性，尽可能保证用户可以顺利安装最新版。
 
 ```
-kafka_download_url: "https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.4.0/kafka_2.13-2.4.0.tgz"
+kafka_download_url: "https://apachemirror.sg.wuchna.com/kafka/2.5.0/kafka_2.13-2.5.0.tgz"
 ```
 
 如果你发现不是最新版本，请到 kafka [清华大学软件仓库页面](https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/)获取最新版源码下载链接，再修改 [main.yml](/roles/kafka/defaults/main.yml) 中的 ```kafka_download_url``` 变量值即可安装最新版 Kafka。
