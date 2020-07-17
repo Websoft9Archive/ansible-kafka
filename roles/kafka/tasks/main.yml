@@ -48,11 +48,13 @@
 - name: Start Zookeeper
   service:
     name: zookeeper
+    state: started
     enabled: yes
 
 - name: Start kafka
   service:
     name: kafka
+    state: started
     enabled: yes
 
 - name: Setting Owner and  Group
