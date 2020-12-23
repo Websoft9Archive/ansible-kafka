@@ -1,4 +1,4 @@
 jdk_version: "8"
 jdk_distribution: "jdk"
 
-common_os_support: ["CentOS", "Ubuntu", "Amazon"x"]
+common_os_support: ["CentOS", "Ubuntu", "Amazon"]
