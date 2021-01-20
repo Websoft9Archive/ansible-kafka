@@ -1,4 +1,0 @@
----
-- name: check_kafka_service
-  debug:
-    var: check_kafka_service.stdout
