@@ -7,6 +7,29 @@
   vars_files:
     - vars/main.yml
 
+  vars_prompt:
+    - name: 'kafka_version_selection'
+      prompt: "\nPlease choose the number for Kafka version [ 1/6] \n\n
+      1: Kafka2.7\n
+      2: Kafka2.6\n
+      3: Kafka2.5\n
+      4: Kafka2.4\n
+      5: Kafka2.3\n
+      6: Kafka2.2\n"
+      private: no
+      default: 1
+  
+  vars:
+    kafka_select:
+      '1': '2.7'
+      '2': '2.5'
+      '3': '2.5'
+      '4': '2.4'
+      '5': '2.3'
+      '6': '2.2'
+
+    kafka_version: "{{kafka_select[kafka_version_selection]}}" 
+
   roles:
     - { role: role_common, tags: "role_common"}  
     - { role: role_cloud, tags: "role_cloud"} 

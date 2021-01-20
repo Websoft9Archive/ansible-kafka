@@ -9,7 +9,7 @@
 
 - name: Download Kafka
   unarchive:
-    src: "{{kafka_download_url}}"
+    src: "{{kafka_meta[kafka_version].download_url}}"
     dest: /opt/
     remote_src: yes
     owner: kafka
