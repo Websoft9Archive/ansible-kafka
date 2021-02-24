@@ -45,5 +45,6 @@
     - { role: role_cloud, tags: "role_cloud"} 
     - { role: role_jdk, tags: "role_jdk"} 
     - { role: role_kafka, tags: "role_kafka"}
+    - { role: role_docker, tags: "role_docker"} 
     - { role: role_preend, tags: "role_preend"}
     - { role: role_end, tags: "role_end" }

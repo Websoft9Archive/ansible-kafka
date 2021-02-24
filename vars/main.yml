@@ -1,5 +1,5 @@
 jdk_version: "8"
 jdk_distribution: "jdk"
 docker_applications:
-  - kafkamanager
+  - cmak
 common_os_support: ["CentOS", "Ubuntu", "Amazon"]
