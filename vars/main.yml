@@ -3,3 +3,12 @@ jdk_distribution: "jdk"
 docker_applications:
   - cmak
 common_os_support: ["CentOS", "Ubuntu", "Amazon"]
+
+init_docker:
+  cmak:
+    admin_username: admin
+    admin_password: 123456
+    service_after: "docker.service"
+    compose_path: "/data/apps/cmak/docker-compose.yml"
+    compose_commands:
+      - sudo sed -i "s/123456/$new_password/g"  /data/apps/cmak/docker-compose.yml
