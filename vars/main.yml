@@ -12,4 +12,4 @@ init_docker:
     compose_path: "/data/apps/cmak/docker-compose.yml"
     compose_commands:
       - sudo sed -i "s/123456/$new_password/g"  /data/apps/cmak/docker-compose.yml
-    down:
+    down: ""
