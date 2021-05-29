@@ -9,4 +9,8 @@
 [亚马逊](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html)
 ![image](https://user-images.githubusercontent.com/43192516/120056260-87f6d180-c06d-11eb-8bf7-6ed61272f990.png)
 
+[腾讯](https://buy.cloud.tencent.com/ckafka?rid=5)
+![image](https://user-images.githubusercontent.com/43192516/120056479-115ad380-c06f-11eb-9db6-dd7ad85ffaca.png)
+
+
 
