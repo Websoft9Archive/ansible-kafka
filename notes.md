@@ -1,9 +1,9 @@
 # Kafka support version
 
-阿里云
+[阿里云](https://common-buy.aliyun.com/?commodityCode=alikafka_pre&regionId=cn-hongkong)
 ![image](https://user-images.githubusercontent.com/43192516/120056124-e2436280-c06c-11eb-99d3-efe020d389dd.png)
 
-华为云
+[华为云](https://console.huaweicloud.com/dms/?region=cn-north-4&engine=kafka&locale=zh-cn#/queue/newCreateKafka)
 ![image](https://user-images.githubusercontent.com/43192516/120056159-1dde2c80-c06d-11eb-8b76-d83602224459.png)
 
 [亚马逊](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html)
