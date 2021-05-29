@@ -12,5 +12,9 @@
 [腾讯](https://buy.cloud.tencent.com/ckafka?rid=5)
 ![image](https://user-images.githubusercontent.com/43192516/120056479-115ad380-c06f-11eb-9db6-dd7ad85ffaca.png)
 
+> Apache Kafka download url(https://archive.apache.org/dist/kafka/), there is no Kafka2.4.2 
+
+
+
 
 
