@@ -6,3 +6,7 @@
 华为云
 ![image](https://user-images.githubusercontent.com/43192516/120056159-1dde2c80-c06d-11eb-8b76-d83602224459.png)
 
+亚马逊
+![image](https://user-images.githubusercontent.com/43192516/120056260-87f6d180-c06d-11eb-8bf7-6ed61272f990.png)
+
+
