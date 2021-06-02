@@ -21,6 +21,12 @@ Kafka 配置目录：*/opt/kafka/config*
 
 Java 虚拟机目录： */usr/bin/java*  
 
+### CMAK
+
+[CMAK](https://github.com/yahoo/CMAK) 是管理 Kafka 集群的可视化工具，基于 Docker 安装
+
+CMAK 安装目录： */data/apps/cmak*  
+
 ### Zookeeper
 
 Zookeeper 配置文件路径：/opt/zookeeper/conf/  
@@ -30,24 +36,28 @@ Zookeeper 日志文件：/opt/zookeeper/tmp/zookeeper.out
 
 在云服务器中，通过 **[安全组设置](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** 来控制（开启或关闭）端口是否可以被外部访问。 
 
-通过命令`netstat -tunlp`查看相关端口，下面列出本应用可能要用到的端口：
+通过命令`netstat -tunlp` 看查看相关端口，下面列出可能要用到的端口：
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
 | TCP | 9092 | Kafka | 可选 |
 | TCP | 2181 | Zookeeper | 可选 |
+| TCP | 9091 | CMAK | 可选 |
 
 ## 版本号
 
 组件版本号可以通过云市场商品页面查看。但部署到您的服务器之后，组件会自动进行更新导致版本号有一定的变化，故精准的版本号请通过在服务器上运行命令查看：
 
 ```shell
-# Linux Version
-lsb_release -a
+# Check all components version
+sudo cat /data/logs/install_version.txt
 
 # Java  Version
 java -version
 
 # Kafka version
 ls /opt/kafka/libs | grep kafka_
+
+# CMAK version
+docker exec -it cmak bash -c 'ls /cmak/lib/cmak.cmak-*-assets.jar'
 ```

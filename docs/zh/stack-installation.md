@@ -19,6 +19,10 @@ bash /opt/kafka/bin/kafka-configs.sh
 
 > 需要了解更多 Kafka 的使用，请参考官方文档：[Kafka Quickstart](https://kafka.apache.org/quickstart)
 
+## Kafka 入门向导
+
+Coming soon...
+
 ## 常见问题
 
 #### 运行 *kafka-run-class.sh* 显示 **java: not found...**的错误？

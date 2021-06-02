@@ -17,6 +17,12 @@ Kafka configuration directory: */opt/kafka/config*
 
 JVM directory: */usr/bin/java*  
 
+### CMAK
+
+[CMAK](https://github.com/yahoo/CMAK) is cluster Manager for Apache Kafka, is installed based on Docker
+
+CMAK directory: */data/apps/cmak*  
+
 ### Zookeeper
 
 Zookeeper configuration directory: /opt/zookeeper/conf/  
@@ -32,6 +38,7 @@ You can run the cmd `netstat -tunlp` to list all used ports, and we list the fol
 | --- | --- | --- | --- |
 | TCP | 9092 | Kafka | Optional |
 | TCP | 2181 | Zookeeper | Optional |
+| TCP | 9091 | CMAK | Optional |
 
 
 ## Version

@@ -1,11 +1,19 @@
 # FAQ
 
-#### 如何以调试模式启动Kafka服务？
+#### 如何以调试模式启动 Kafka 服务？
 
 ```
 systemctl stop kafka zookeeper
 bash /opt/kafka/bin/kafka-server-start.sh
 ```
+
+#### 是否提供了 Kafka 可视化管理工具？
+
+是的。参考 [CMAK](/zh/solution-gui.md)
+
+#### 为何 CMAK 中无法支持所需的 Kafka 版本？
+
+CMAK 并不是支持所有 Kafka 版本，具体以使用为准
 
 #### 是否可以修改Kafka的源码路径？
 

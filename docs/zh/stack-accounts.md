@@ -1,10 +1,19 @@
 # 账号密码
 
-使用Kafka，可能会用到的几组账号密码如下：
+通过**SSH**连接云服务器，运行 `sudo cat /credentials/password.txt` 命令，查看所有相关账号和密码
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
+
+下面列出可能需要用到的几组账号密码：
 
 ## Kafka
 
 无账号密码认证
+
+## CMAK
+
+* 管理员账号: `admin`
+* 管理员密码: 存储在您的服务器中的文件中 */credentials/password.txt*  
 
 ## Linux
 

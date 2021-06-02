@@ -19,6 +19,10 @@ bash /opt/kafka/bin/kafka-configs.sh
 
 > Refer to the Kafka official docs for your quick start: [Kafka Quickstart](https://kafka.apache.org/quickstart)
 
+## Kafka Setup wizard
+
+Coming soon...
+
 ## Q&A
 
 #### Run the command "kafka-topics.sh", java not found?

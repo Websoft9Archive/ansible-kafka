@@ -10,6 +10,10 @@ bash /opt/kafka/bin/kafka-server-start.sh
 
 No
 
+#### Is a web-based GUI management tool for Kafka?
+
+Yes, refer to [CMAK](/solution-gui.md)
+
 #### What's the difference between Deployment and Installation?
 
 - Deployment is a process of installing and configuring a sequence of software in sequence in a different order, which is a complex system engineering.  
