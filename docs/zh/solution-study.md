@@ -38,6 +38,7 @@ Kafka中每个Topic都会以/brokers/topics/[topic]的形式被记录，如/brok
 4. 消费者注册
 消费者服务器在初始化启动时加入Consumer Group，注册到消费者分组。每个消费者服务器启动时，都会到Zookeeper的指定节点下创建一个属于自己的消费者节点，例如/consumers/[group_id]/ids/[consumer_id]，完成节点创建后，消费者就会将自己订阅的Topic信息写入该临时节点。
 
-
+Zookeeper用来管理Kafka，它没和生产者发生关系，只和消费者发生关系，如下图：
+ ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kafka/kafka-relation-websoft9.png)
 
 ### 客户端可视化工具
