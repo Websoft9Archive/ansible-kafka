@@ -38,7 +38,19 @@ Kafka中每个Topic都会以/brokers/topics/[topic]的形式被记录，如/brok
 4. 消费者注册
 消费者服务器在初始化启动时加入Consumer Group，注册到消费者分组。每个消费者服务器启动时，都会到Zookeeper的指定节点下创建一个属于自己的消费者节点，例如/consumers/[group_id]/ids/[consumer_id]，完成节点创建后，消费者就会将自己订阅的Topic信息写入该临时节点。
 
+5. Leader选举
+Zookeeper主导Kafka的Leader选举，选举过程过程比较复杂，这里不详细论述。这里主要说下选举的时机
+ - 集群初始化启动时选举
+ - 热加载了新的Kafka节点时
+ - Leader节点挂掉的时候了解决方法
+
 Zookeeper用来管理Kafka，它没和生产者发生关系，只和消费者发生关系，如下图：
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kafka/kafka-relation-websoft9.png)
 
-### 客户端可视化工具
+### 生产者如何找到Leader分区的呢？
+
+Kafka集群时，每个Kafka节点都是对等，是通过Zookeeper对不同的topic选举出Leader分区。生产者发送消息时，如何知道哪个节点是Leader分区呢? 简单描述一下步骤：
+1. 生产者程序启动后，第一次发元数据请求，发给任意一台，都会返回所有元数据信息，包含你需要信息的Leander分区在哪里
+2. 生产者将Leader分区缓存下来，当发送消息时，就从缓存找到Leader分区，直接将消息发送给Leader分区
+3. 假如经过一段时间，增加了新的kafka服务器，导致leader分区重新选举，生产者不知情还继续将消息发送给之前的那个分区，这时会返回失败信息。这时将重复1,2保证能正常发送信息。
+
