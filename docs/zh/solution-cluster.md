@@ -70,7 +70,7 @@ After=network.target  zookeeper.service
 Type=simple
 User=root
 Group=root
-ExecStart=/opt/kafka/bin/zookeeper-server-start.sh /opt/kafka1/config/zookeeper.properties
+ExecStart=/opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties
 ExecStop=/opt/kafka/bin/zookeeper-server-stop.sh
 Restart=on-failure
 [Install]
