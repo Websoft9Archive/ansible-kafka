@@ -118,6 +118,6 @@ systemctl daemon-reload
 systemctl restart kafka
 ```
 
-7,复制上面节点到服务器（172.31.57.63），将步骤3的myid修改成2，步骤5中broker.id修改成2，步骤5中listeners修改成该服务器地址；其他节点一次类推
+7,复制上面节点到服务器（172.31.57.63），将步骤3的myid修改成2，步骤5中broker.id修改成2，步骤5中listeners修改成该服务器地址；其他节点依次类推
 
 8，注意当所有相关节点服务器都启动后，才会显示正常，否则会报错
