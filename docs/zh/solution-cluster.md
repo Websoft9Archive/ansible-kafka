@@ -10,8 +10,13 @@ Kafka对大数据处理性能优越，一般使用Kafka时，系统数据量都�
 
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kafka/kafka-relation-websoft9.png)
 
-在我们的方案中，每个Kafka节点同时也是ZooKeeper节点。
+我们Kafka集群方案中集群特点：
+1. Kafka搭建了集群，Zookeeper也搭建了集群管理Kafka
+2. 每个Kafka节点同时也是ZooKeeper节点
+3. 消息生产时和Kafka集群连接，消费时需要先通过Zookeeper找到消费位置offset,再连接Kafka集群获取消息
  ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/kafka/kafka-cluster-websoft9.png)
+ 
+ 
 
 ### 如何搭建Zookeeper和Kafka集群？
 
