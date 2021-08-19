@@ -1,4 +1,4 @@
-# Kafka Cloud Installer
+# kafka Cloud Installer
 
 ![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
@@ -6,7 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-**Kafka Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Apache Kafka](https://kafka.apache.org/) based on Ansible and shell. It helps user install Kafka and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
+**kafka Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [kafka](https://kafka.apache.org/) based on Ansible and shell. It helps user install kafka and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 ## System Requirement
 
@@ -14,16 +14,16 @@ System Requirement to install this repository are as following：
 
 | Conditions       | Details                               | Notes                |
 | ------------------- | --------------------------------| -------------------- |
-| Operating System   | CentOS7.x, Ubuntu18.04, Amazon Linux2 | Optional                 |
+| Operating System   | CentOS7.x, Ubuntu20.04, Amazon Linux2 | Optional                 |
 | Public Cloud     | AWS, Azure, Alibaba Cloud, HUAWEI ClOUD, Tencent Cloud    | Optional                 |
 | Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
-| Server Configuration | vCPU no less than 1 core, Memory no less than  1 GIB, Storage no less than 10 GB, Bandwidth no less than 100M ||
+| Server Configuration | vCPU no less than 1 core, Memory no less than 2 GIB, Storage no less than 20 GB, Swap no less than 2GB |Bandwidth no less than 100M|
 
-To learn more information, please view [Installation & Configuration](http://kafka.apache.org/quickstart).
+To learn more information, please view [Installation & Configuration](https://kafka.apache.org/documentation/).
 
 ## Ecosystem
 
-Core components of this repository: Apache Kafka, Nginx, PostgreSQL, Docker, phpPgAdmin on docker
+Core components of this repository: Kafka, Java, Docker, CMAK on docker
 
 Learn more about [Parameters](/docs/stack-components.md).
 
@@ -44,15 +44,11 @@ If the network is broken or blocked, SSH will be interrupted and the installatio
 
 #### Image on Cloud 
 
-Follow our [Kafka image](https://apps.websoft9.com/kafka) for installation on major Cloud Platform.
+Follow our [kafka image](https://apps.websoft9.com/kafka) for installation on major Cloud Platform.
 
 ## Documentation
 
 **[Administrator Guide](https://support.websoft9.com/docs/kafka)** 
-
-## Changelog
-
-Detailed changes are documented in the [CHANGELOG](/CHANGELOG.md).
 
 ## License
 
@@ -64,14 +60,16 @@ This program provided by Websoft9 contains a series of software with separate co
 
 ## FAQ
 
+#### How to install and view the latest release?
+
+This repository install way is Isntallation for download binaries files , you can  view the version from [Official URL](https://archive.apache.org/dist/kafka/).  
+We will check [Release version](https://github.com/Websoft9/ansible-kafka/releases) regularly. Update and test this project to ensure that users can successfully install the required version of kafka.
+
 #### Can I run this repository on Ansible Tower? 
 
 Yes.
 
-#### How to install and view the latest release?
+#### Although the results of the deploy by image are consistent with the results of deploy by script, what is the difference between the two deployment methods?
 
-You can get the Kafka version from [Kafka Download](http://kafka.apache.org/downloads), and you can see this deployment **[kafka_version](https://github.com/Websoft9/role_kafka/blob/main/vars/main.yml)** , if deployment version is not suitable for you, you can create an issue for us
+Suggest you read the document [Deploy by Image vs Deploy by Script](https://support.websoft9.com/docs/faq/bz-product.html#deployment-comparison).
 
-#### Is the default password safe?
-
-The solution used the random password solution, every deployment produce unique password which is different from other users
